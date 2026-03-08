@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/zoe",
+      "destination": "https://zoe-app.vercel.app/zoe"
+    },
+    {
+      "source": "/zoe/:path*",
+      "destination": "https://zoe-app.vercel.app/zoe/:path*"
+    },
+    {
+      "source": "/Promptos",
+      "destination": "https://promptos-app.vercel.app/Promptos"
+    },
+    {
+      "source": "/Promptos/:path*",
+      "destination": "https://promptos-app.vercel.app/Promptos/:path*"
+    }
+  ]
+}

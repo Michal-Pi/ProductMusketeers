@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Musketeers | Company Context for Zoe, PromptOS, and Future Products</title>
+  <meta
+    name="description"
+    content="Product Musketeers is the company context behind Zoe, PromptOS, and future digital products built by three experienced product leaders."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3ede2;
+      --paper: rgba(255, 251, 245, 0.8);
+      --ink: #16253a;
+      --muted: #5a6472;
+      --line: rgba(22, 37, 58, 0.12);
+      --accent: #c96a4c;
+      --accent-deep: #ab553a;
+      --accent-soft: #f2ddcf;
+      --navy-soft: #d9e3ef;
+      --shadow: 0 24px 70px rgba(22, 37, 58, 0.11);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(201, 106, 76, 0.13), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(91, 130, 183, 0.11), transparent 24%),
+        linear-gradient(180deg, #faf6ef 0%, #f2e9dc 100%);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(18, 35, 61, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 35, 61, 0.03) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 80%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(243, 237, 226, 0.76);
+      border-bottom: 1px solid rgba(18, 35, 61, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(135deg, var(--ink), #26456f);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 16px 30px rgba(18, 35, 61, 0.18);
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-copy strong,
+    .brand-copy span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-copy strong {
+      font-size: 0.98rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy span {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      color: var(--ink);
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin: 5px auto;
+      background: currentColor;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .cta-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .cta-link.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 14px 28px rgba(201, 106, 76, 0.22);
+    }
+
+    .cta-link.primary:hover {
+      background: var(--accent-deep);
+    }
+
+    .cta-link.secondary {
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--ink);
+      border: 1px solid rgba(18, 35, 61, 0.12);
+    }
+
+    .hero {
+      padding: 76px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-panel,
+    .card,
+    .founder,
+    .quote,
+    .cta-panel {
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-copy {
+      border-radius: 34px;
+      padding: 42px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -60px;
+      top: -80px;
+      border-radius: 50%;
+      background: rgba(240, 109, 79, 0.12);
+      filter: blur(10px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(18, 35, 61, 0.06);
+      color: var(--ink);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(240, 109, 79, 0.14);
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      margin-top: 22px;
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+    }
+
+    h1 em,
+    h2 em {
+      font-family: "Instrument Serif", serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-copy p {
+      margin: 26px 0 0;
+      max-width: 720px;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .origin-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 12px;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .origin-line strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .origin-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(22, 37, 58, 0.06);
+      border: 1px solid rgba(22, 37, 58, 0.08);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      color: var(--ink);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.54);
+      border: 1px solid rgba(18, 35, 61, 0.08);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
+    .hero-panel {
+      border-radius: 34px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      background:
+        linear-gradient(180deg, rgba(22, 37, 58, 0.97) 0%, rgba(31, 50, 79, 0.95) 100%);
+      color: #f8f4ec;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before,
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: rgba(240, 109, 79, 0.16);
+      filter: blur(8px);
+    }
+
+    .hero-panel::before {
+      width: 180px;
+      height: 180px;
+      top: -60px;
+      right: -20px;
+    }
+
+    .hero-panel::after {
+      width: 120px;
+      height: 120px;
+      bottom: -20px;
+      left: -20px;
+    }
+
+    .panel-top {
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel-kicker {
+      color: rgba(248, 244, 236, 0.72);
+      font-size: 0.79rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .panel-stack {
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .stack-card {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stack-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .stack-card span {
+      display: block;
+      color: rgba(248, 244, 236, 0.74);
+      line-height: 1.55;
+      font-size: 0.95rem;
+    }
+
+    .signature {
+      position: relative;
+      z-index: 1;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .signature strong {
+      display: block;
+      font-family: "Instrument Serif", serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .signature span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(248, 244, 236, 0.7);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 24px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 22px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(22, 37, 58, 0.08);
+    }
+
+    .section-heading p {
+      margin: 0;
+      max-width: 520px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 4.8vw, 4.35rem);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .mission-grid,
+    .product-showcase,
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .mission-grid {
+      grid-template-columns: 1.05fr 1.05fr 0.9fr;
+    }
+
+    .manifesto {
+      border-radius: 30px;
+      padding: 30px;
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .manifesto h3,
+    .product-card h3 {
+      margin: 18px 0 12px;
+      font-size: 1.6rem;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .manifesto p,
+    .product-card p,
+    .contact-copy p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .manifesto .card-label,
+    .product-card .card-label {
+      background: rgba(22, 37, 58, 0.07);
+      color: var(--ink);
+    }
+
+    .manifesto.dark {
+      background: linear-gradient(180deg, rgba(22, 37, 58, 0.97) 0%, rgba(31, 50, 79, 0.95) 100%);
+      color: #f8f4ec;
+    }
+
+    .manifesto.dark p {
+      color: rgba(248, 244, 236, 0.76);
+    }
+
+    .manifesto.dark .card-label {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(22, 37, 58, 0.06);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card {
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .card-label {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .card h3 {
+      margin: 18px 0 14px;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .product-showcase {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-card {
+      border-radius: 32px;
+      padding: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.46);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      right: -40px;
+      top: -60px;
+      filter: blur(8px);
+      opacity: 0.9;
+    }
+
+    .product-card.zoe {
+      background: linear-gradient(180deg, rgba(255, 251, 245, 0.88) 0%, rgba(220, 231, 245, 0.68) 100%);
+    }
+
+    .product-card.zoe::after {
+      background: rgba(91, 130, 183, 0.16);
+    }
+
+    .product-card.promptos {
+      background: linear-gradient(180deg, rgba(255, 251, 245, 0.88) 0%, rgba(242, 221, 207, 0.72) 100%);
+    }
+
+    .product-card.promptos::after {
+      background: rgba(240, 109, 79, 0.18);
+    }
+
+    .product-card .positioning {
+      margin: 18px 0;
+      font-size: 1.28rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .bullet-list {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .bullet-list li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .quote {
+      border-radius: 32px;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(220, 231, 245, 0.68) 100%);
+    }
+
+    .quote p {
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .quote small {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 68px minmax(0, 1fr);
+      gap: 18px;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.56);
+      border: 1px solid rgba(18, 35, 61, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .step-num {
+      width: 68px;
+      height: 68px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .step h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .founder {
+      border-radius: 30px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 251, 245, 0.88) 0%, rgba(255, 255, 255, 0.62) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.52);
+    }
+
+    .founder::after {
+      content: "";
+      position: absolute;
+      inset: auto -20px -24px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(201, 106, 76, 0.1);
+      filter: blur(10px);
+    }
+
+    .founder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 32%);
+      pointer-events: none;
+    }
+
+    .founder .index {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(18, 35, 61, 0.08);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .founder h3 {
+      margin: 0;
+      font-size: 1.55rem;
+      letter-spacing: -0.035em;
+    }
+
+    .founder .role {
+      display: block;
+      margin-top: 10px;
+      color: var(--accent-deep);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .founder p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+
+    .founder-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(22, 37, 58, 0.08);
+      color: var(--ink);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .founder-meta::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .proof-box {
+      padding: 24px;
+      border-radius: 26px;
+      background: rgba(22, 37, 58, 0.94);
+      color: #fff;
+      box-shadow: 0 22px 42px rgba(22, 37, 58, 0.16);
+    }
+
+    .proof-box strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .proof-box span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      line-height: 1.55;
+      font-size: 0.94rem;
+    }
+
+    .cta-panel {
+      border-radius: 36px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.9fr);
+      gap: 20px;
+      align-items: start;
+      margin: 26px 0 80px;
+      background:
+        linear-gradient(135deg, rgba(22, 37, 58, 0.97), rgba(36, 58, 90, 0.94));
+      color: #f8f4ec;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-panel::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -70px;
+      top: -90px;
+      border-radius: 50%;
+      background: rgba(240, 109, 79, 0.18);
+      filter: blur(10px);
+    }
+
+    .cta-panel h2 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2.2rem, 4vw, 3.45rem);
+      max-width: 760px;
+    }
+
+    .cta-panel p {
+      position: relative;
+      z-index: 1;
+      margin: 14px 0 0;
+      max-width: 560px;
+      line-height: 1.75;
+      color: rgba(248, 244, 236, 0.76);
+    }
+
+    .contact-copy .tag-row {
+      margin-top: 24px;
+    }
+
+    .contact-copy .tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(248, 244, 236, 0.82);
+    }
+
+    .contact-form {
+      position: relative;
+      z-index: 1;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      gap: 14px;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: 0.88rem;
+      color: rgba(248, 244, 236, 0.78);
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: rgba(240, 109, 79, 0.75);
+      box-shadow: 0 0 0 4px rgba(240, 109, 79, 0.16);
+    }
+
+    .form-note,
+    .status-note {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: rgba(248, 244, 236, 0.72);
+    }
+
+    .status-note {
+      min-height: 1.6em;
+    }
+
+    .footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(18, 35, 61, 0.08);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .process,
+      .cta-panel,
+      .card-grid,
+      .mission-grid,
+      .product-showcase,
+      .founders,
+      .proof-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-panel {
+        padding-right: 28px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        position: static;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav {
+        position: relative;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 22px;
+        background: rgba(255, 250, 242, 0.96);
+        border: 1px solid rgba(18, 35, 61, 0.08);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .nav-links.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-links .cta-link {
+        width: 100%;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .card,
+      .quote,
+      .founder,
+      .cta-panel,
+      .step {
+        padding: 24px;
+        border-radius: 26px;
+      }
+
+      h1 {
+        font-size: clamp(2.9rem, 16vw, 4.6rem);
+      }
+
+      .stat-row {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .step-num {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <nav class="nav">
+        <a class="brand" href="#top" aria-label="Product Musketeers home">
+          <div class="brand-mark">PM</div>
+          <div class="brand-copy">
+            <strong>Product Musketeers</strong>
+            <span>Company context for the products we are building.</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#mission">Mission</a>
+          <a href="#products">Products</a>
+          <a href="/zoe">Zoe</a>
+          <a href="/Promptos">PromptOS</a>
+          <a href="#team">Team</a>
+          <a href="#contact" class="cta-link primary">Contact us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow">Product company context, team background, and active product demos</span>
+          <h1>Product Musketeers is the company context behind a small portfolio of <em>digital products</em>.</h1>
+          <p>
+            Product Musketeers is built by three senior product leaders with 50+ years of combined experience across
+            B2C and B2B web and mobile products. This site provides context on who we are, how we think, and what
+            we are building. It also acts as a stable front door for demos, early testing, and product review.
+          </p>
+
+          <div class="hero-actions">
+            <a class="cta-link primary" href="#products">View products</a>
+            <a class="cta-link secondary" href="#contact">Contact the team</a>
+          </div>
+
+          <div class="origin-line">
+            <strong>Founded by operators from</strong>
+            <span class="origin-pill">Miro</span>
+            <span class="origin-pill">Sword Health</span>
+            <span class="origin-pill">DiscoverCars</span>
+            <span class="origin-pill">Lokalise</span>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <strong>50+ years</strong>
+              <span>Combined product experience across venture-backed startups, scale-ups, and enterprise teams.</span>
+            </div>
+            <div class="stat">
+              <strong>B2C + B2B</strong>
+              <span>Hands-on product leadership across consumer experiences, SaaS platforms, internal tools, and mobile apps.</span>
+            </div>
+            <div class="stat">
+              <strong>2 active products</strong>
+              <span>Zoe and PromptOS are live initiatives in the Musketeers lab, available for demos, feedback, and early testing.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel" data-reveal>
+          <div class="panel-top">
+            <div class="panel-kicker">Why this page exists</div>
+            <div class="panel-stack">
+              <div class="stack-card">
+                <strong>Experienced product operators</strong>
+                <span>The team combines strategy, UX, delivery, and growth discipline shaped by decades of hands-on product work.</span>
+              </div>
+              <div class="stack-card">
+                <strong>Used to launch and test products in market</strong>
+                <span>The site provides a durable company layer around products that are actively being validated, demoed, and improved.</span>
+              </div>
+              <div class="stack-card">
+                <strong>Designed for clarity and trust</strong>
+                <span>Whether someone arrives as a user, partner, reviewer, or investor, the company and products should be legible quickly.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="signature">
+            <strong>Clarity for the company. Context for the products.</strong>
+            <span>A single front door for Product Musketeers, Zoe, and PromptOS.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="mission">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>Mission, vision, and <em>company intent</em></h2>
+          <p>
+            Product Musketeers exists to build useful software with clear purpose and to provide a credible public
+            context for the products connected to this company.
+          </p>
+        </div>
+
+        <div class="mission-grid">
+          <article class="manifesto" data-reveal>
+            <span class="card-label">Mission</span>
+            <h3>Build software that reduces complexity and improves execution.</h3>
+            <p>
+              We build products that reduce complexity, improve execution, and create practical leverage for modern
+              digital work. The company exists to turn strong product thinking into useful software.
+            </p>
+          </article>
+
+          <article class="manifesto" data-reveal>
+            <span class="card-label">Vision</span>
+            <h3>Create a durable portfolio of useful, trusted digital products.</h3>
+            <p>
+              Our long-term vision is a portfolio of software products with clear utility, strong user trust, and
+              thoughtful execution across both consumer and professional workflows.
+            </p>
+          </article>
+
+          <article class="manifesto dark" data-reveal>
+            <span class="card-label">What this site is for</span>
+            <h3>A clear public layer around the team and the products.</h3>
+            <p>
+              ProductMusketeers.com is both a flagship brand page and an active launch surface for products in
+              development, giving visitors one place to understand the company, explore active products, and request
+              access or conversation where relevant.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Company profile</span>
+              <span class="tag">Team background</span>
+              <span class="tag">Early access</span>
+              <span class="tag">Product demos</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>What this site is meant to <em>make clear</em></h2>
+          <p>
+            This is not meant to read like a services brochure. It is a concise context page for the company,
+            the team, and the product initiatives connected to this domain.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card" data-reveal>
+            <span class="card-label">Company</span>
+            <h3>A product company built by three experienced operators</h3>
+            <p>
+              Product Musketeers is the parent context for the team and the product work emerging from it. The
+              emphasis is on thoughtful software, clear use cases, and credible execution.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="card-label">Products</span>
+            <h3>An active environment for product demos, testing, and iteration</h3>
+            <p>
+              The domain is used to introduce products, route users into live experiences, and create a stable public
+              layer around initiatives that are still evolving.
+            </p>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="card-label">Trust</span>
+            <h3>Structured to make the company legible to people and platforms alike</h3>
+            <p>
+              The page is intentionally clear about team identity, product intent, and active initiatives so anyone
+              reviewing the products can understand what sits behind them.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell">
+        <div class="proof-strip">
+          <div class="proof-box" data-reveal>
+            <strong>Company</strong>
+            <span>One parent identity for the team, the products, and the public context around both.</span>
+          </div>
+          <div class="proof-box" data-reveal>
+            <strong>Products</strong>
+            <span>Zoe and PromptOS are active product initiatives being developed, demoed, and tested.</span>
+          </div>
+          <div class="proof-box" data-reveal>
+            <strong>Audience</strong>
+            <span>Useful context for early users, partners, investors, and product reviewers without over-explaining.</span>
+          </div>
+          <div class="proof-box" data-reveal>
+            <strong>Intent</strong>
+            <span>A serious, durable front door for products that need both credibility and room to evolve.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>Products currently associated with the <em>company</em></h2>
+          <p>
+            These are the two active products featured on the site today. Each one addresses a concrete workflow
+            pain point and reflects how the company thinks about clarity, workflow design, and execution leverage.
+          </p>
+        </div>
+
+        <div class="product-showcase">
+          <article class="product-card zoe" data-reveal>
+            <span class="card-label">Zoe</span>
+            <h3>A unified work brain for high-autonomy professionals.</h3>
+            <p class="positioning">Stop reacting. Start operating.</p>
+            <p>
+              Zoe connects Slack, Gmail, and Google Calendar, turns communication and meetings into a live priority
+              queue, and tells users what to do next before noise steals the day.
+            </p>
+            <ul class="bullet-list">
+              <li>Built for product, marketing, founder, consulting, and team-lead workflows.</li>
+              <li>Core pillars: Command Center, Impact Dashboard, Calendar Intelligence, Zoe Chat, and Smart Drafts.</li>
+              <li>Promises clearer daily direction, faster meeting prep, better follow-through, and lower reactive overload.</li>
+            </ul>
+            <div class="product-actions">
+              <a class="cta-link primary" href="/zoe">Explore Zoe</a>
+              <a class="cta-link secondary" href="#contact">Request a demo</a>
+            </div>
+          </article>
+
+          <article class="product-card promptos" data-reveal>
+            <span class="card-label">PromptOS</span>
+            <h3>An AI prompt operations platform for individuals and teams.</h3>
+            <p class="positioning">Your operating system for AI prompts.</p>
+            <p>
+              PromptOS turns prompts from scattered text into reusable team assets with model-aware optimization,
+              semantic search, structured context, versioning paths, and safe sharing across workflows.
+            </p>
+            <ul class="bullet-list">
+              <li>Made for daily AI users across product, engineering, design, marketing, operations, legal, and research.</li>
+              <li>Core workflow: Save, optimize, search, reuse, share, and improve prompts over time.</li>
+              <li>Differentiates from note apps through semantic retrieval, AI metadata, optimization logic, and usage visibility.</li>
+            </ul>
+            <div class="product-actions">
+              <a class="cta-link primary" href="/Promptos">Explore PromptOS</a>
+              <a class="cta-link secondary" href="#contact">Join early access</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>How the team tends to <em>build and think</em></h2>
+          <p>
+            Across internal products and collaborative work, the team values clear reasoning, compact execution
+            loops, and product decisions that stay close to real user behavior.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="quote" data-reveal>
+            <p>"Strong product work usually looks quieter than expected: clear reasoning, fast learning loops, and useful software."</p>
+            <small>
+              Product Musketeers brings together product strategy, UX thinking, growth awareness, and shipping
+              discipline in one compact operating perspective.
+            </small>
+          </div>
+
+          <div class="timeline">
+            <article class="step" data-reveal>
+              <div class="step-num">01</div>
+              <div>
+                <h3>Start from the real constraint</h3>
+                <p>
+                  The work starts by understanding where friction actually lives: context overload, weak priority
+                  logic, clumsy workflows, poor onboarding, or low decision clarity.
+                </p>
+              </div>
+            </article>
+
+            <article class="step" data-reveal>
+              <div class="step-num">02</div>
+              <div>
+                <h3>Reduce complexity into a sharper next move</h3>
+                <p>
+                  The goal is not more features or more noise. It is a tighter sequence of product decisions with
+                  clear reasoning, tradeoffs, and intended outcomes.
+                </p>
+              </div>
+            </article>
+
+            <article class="step" data-reveal>
+              <div class="step-num">03</div>
+              <div>
+                <h3>Build toward something that can earn trust quickly</h3>
+                <p>
+                  Whether the outcome is a product page, a demo, or a live workflow, the standard is the same:
+                  coherence, usability, and enough clarity to stand up to real scrutiny.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>Three builders with <em>complementary strengths</em></h2>
+          <p>
+            Mike Pilawski, Damian Reweda, and Ori Gal met while working together at Lokalise. Together, they bring a
+            mix of product strategy, UX judgment, growth awareness, and delivery discipline shaped by years of building
+            software across global product companies.
+          </p>
+        </div>
+
+        <div class="founders">
+          <article class="founder" data-reveal>
+            <span class="index">01</span>
+            <h3>Mike Pilawski</h3>
+            <span class="role">Miro • Product leadership and operating scale</span>
+            <p>
+              Mike brings long-range product and operating experience across high-growth software businesses, with a
+              background spanning Miro, Lokalise, Smallpdf, Typeform, Leanplum, Vungle, NativeX, and Nokia. His work
+              consistently sits at the intersection of product direction, growth systems, and organizational scale.
+            </p>
+            <span class="founder-meta">Product strategy • Scale dynamics</span>
+          </article>
+
+          <article class="founder" data-reveal>
+            <span class="index">02</span>
+            <h3>Damian Reweda</h3>
+            <span class="role">Sword Health • Product management and technical depth</span>
+            <p>
+              Damian combines a technical foundation in software and mobile product development with hands-on product
+              leadership. His background includes engineering-centered product work, earlier time at STXNext, and
+              product leadership at Lokalise, where he focused on roadmap quality, execution, and cross-functional delivery.
+            </p>
+            <span class="founder-meta">Execution rigor • Technical fluency</span>
+          </article>
+
+          <article class="founder" data-reveal>
+            <span class="index">03</span>
+            <h3>Ori Gal</h3>
+            <span class="role">DiscoverCars • Product direction and user-centered execution</span>
+            <p>
+              Ori’s background includes product leadership at Lokalise, where he served as Director of Product. He
+              brings a practical approach to product direction, workflow clarity, and user-centered execution, with a
+              bias toward products that feel coherent, useful, and trustworthy from the first interaction onward.
+            </p>
+            <span class="founder-meta">Workflow clarity • User judgment</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="shell">
+        <div class="cta-panel" data-reveal>
+          <div class="contact-copy">
+          <h2>Get in touch about the company, the products, or a possible collaboration.</h2>
+          <p>
+              Use the form to ask about Product Musketeers, request access to Zoe or PromptOS, discuss a partnership,
+              or start a broader conversation about where the company is heading.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Company inquiries</span>
+              <span class="tag">Demo requests</span>
+              <span class="tag">Product access</span>
+              <span class="tag">Partnerships</span>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="field-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+              </div>
+            </div>
+            <div class="field-grid">
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text">
+              </div>
+              <div class="field">
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest">
+                  <option>Product Musketeers</option>
+                  <option>Zoe demo</option>
+                  <option>PromptOS demo</option>
+                  <option>Partnership or other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you are building, what you want to improve, or which product you want to see." required></textarea>
+            </div>
+            <button class="cta-link primary" type="submit">Send inquiry</button>
+            <p class="form-note">Direct line: hello@productmusketeers.com</p>
+            <p class="status-note" id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-row">
+      <span>Product Musketeers</span>
+      <span>Company context for Zoe, PromptOS, and future digital products.</span>
+      <span>&copy; <span id="year"></span> Product Musketeers</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+
+    if (toggle && navLinks) {
+      toggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    const contactForm = document.querySelector("#contact-form");
+    const formStatus = document.querySelector("#form-status");
+
+    if (contactForm && formStatus) {
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const name = formData.get("name") || "";
+        const email = formData.get("email") || "";
+        const company = formData.get("company") || "";
+        const interest = formData.get("interest") || "";
+        const message = formData.get("message") || "";
+
+        formStatus.textContent = "Sending your inquiry...";
+
+        fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            company,
+            interest,
+            message
+          })
+        })
+          .then(async (response) => {
+            const payload = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+              throw new Error(payload.error || "Unable to send the inquiry right now.");
+            }
+
+            contactForm.reset();
+            formStatus.textContent = "Inquiry received. We will get back to you shortly.";
+          })
+          .catch((error) => {
+            formStatus.textContent = error.message || "Unable to send the inquiry right now.";
+          });
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll("[data-reveal]").forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>

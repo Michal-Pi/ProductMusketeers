@@ -11,11 +11,11 @@
     },
     {
       "source": "/promptos",
-      "destination": "https://prompt-os2.vercel.app/Promptos"
+      "destination": "https://prompt-os2.vercel.app/promptos"
     },
     {
       "source": "/promptos/:path*",
-      "destination": "https://prompt-os2.vercel.app/Promptos/:path*"
+      "destination": "https://prompt-os2.vercel.app/promptos/:path*"
     }
   ]
 }

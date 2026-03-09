@@ -10,11 +10,11 @@
       "destination": "https://zoe-one.vercel.app/zoe/:path*"
     },
     {
-      "source": "/Promptos",
+      "source": "/promptos",
       "destination": "https://prompt-os2.vercel.app/Promptos"
     },
     {
-      "source": "/Promptos/:path*",
+      "source": "/promptos/:path*",
       "destination": "https://prompt-os2.vercel.app/Promptos/:path*"
     }
   ]

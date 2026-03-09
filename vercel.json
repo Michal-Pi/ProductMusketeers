@@ -3,19 +3,19 @@
   "rewrites": [
     {
       "source": "/zoe",
-      "destination": "https://zoe-app.vercel.app/zoe"
+      "destination": "https://zoe-one.vercel.app/zoe"
     },
     {
       "source": "/zoe/:path*",
-      "destination": "https://zoe-app.vercel.app/zoe/:path*"
+      "destination": "https://zoe-one.vercel.app/zoe/:path*"
     },
     {
       "source": "/Promptos",
-      "destination": "https://promptos-app.vercel.app/Promptos"
+      "destination": "https://prompt-os2.vercel.app/Promptos"
     },
     {
       "source": "/Promptos/:path*",
-      "destination": "https://promptos-app.vercel.app/Promptos/:path*"
+      "destination": "https://prompt-os2.vercel.app/Promptos/:path*"
     }
   ]
 }

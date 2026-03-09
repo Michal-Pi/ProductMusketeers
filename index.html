@@ -638,6 +638,38 @@
       letter-spacing: -0.03em;
     }
 
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(22, 37, 58, 0.07);
+      border: 1px solid rgba(22, 37, 58, 0.08);
+      color: var(--ink);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .status-chip::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
     .bullet-list {
       margin: 22px 0 0;
       padding: 0;
@@ -1148,12 +1180,12 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div class="hero-copy" data-reveal>
-          <span class="eyebrow">Product company context, team background, and active product demos</span>
-          <h1>Product Musketeers is the company context behind a small portfolio of <em>digital products</em>.</h1>
+          <span class="eyebrow">Parent company, team context, and active product demos</span>
+          <h1>The parent company behind <em>Zoe</em>, <em>PromptOS</em>, and future software products.</h1>
           <p>
             Product Musketeers is built by three senior product leaders with 50+ years of combined experience across
-            B2C and B2B web and mobile products. This site provides context on who we are, how we think, and what
-            we are building. It also acts as a stable front door for demos, early testing, and product review.
+            B2C and B2B web and mobile products. This site provides the public company context for what we are
+            building, and acts as a stable front door for demos, early testing, and product review.
           </p>
 
           <div class="hero-actions">
@@ -1191,19 +1223,19 @@
 
         <aside class="hero-panel" data-reveal>
           <div class="panel-top">
-            <div class="panel-kicker">Why this page exists</div>
+            <div class="panel-kicker">What lives under this domain</div>
             <div class="panel-stack">
               <div class="stack-card">
-                <strong>Experienced product operators</strong>
-                <span>The team combines strategy, UX, delivery, and growth discipline shaped by decades of hands-on product work.</span>
+                <strong>Product Musketeers</strong>
+                <span>The parent company context for the team, the products, and the public identity around both.</span>
               </div>
               <div class="stack-card">
-                <strong>Used to launch and test products in market</strong>
-                <span>The site provides a durable company layer around products that are actively being validated, demoed, and improved.</span>
+                <strong>Zoe and PromptOS</strong>
+                <span>Two active products currently being developed, demoed, and refined under the same company umbrella.</span>
               </div>
               <div class="stack-card">
-                <strong>Designed for clarity and trust</strong>
-                <span>Whether someone arrives as a user, partner, reviewer, or investor, the company and products should be legible quickly.</span>
+                <strong>Users, reviewers, partners, investors</strong>
+                <span>This page is designed to make the company and its products legible quickly to anyone arriving here for context.</span>
               </div>
             </div>
           </div>
@@ -1216,48 +1248,109 @@
       </div>
     </section>
 
+    <section id="products">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <h2>Active products under the <em>Product Musketeers</em> company</h2>
+          <p>
+            The company currently publishes two active products on this domain. Each one addresses a concrete
+            workflow problem and is available for demos, testing, and product review.
+          </p>
+        </div>
+
+        <div class="product-showcase">
+          <article class="product-card zoe" data-reveal>
+            <span class="card-label">Zoe</span>
+            <h3>A unified work brain for high-autonomy professionals.</h3>
+            <p class="positioning">Stop reacting. Start operating.</p>
+            <div class="status-row">
+              <span class="status-chip">Active development</span>
+              <span class="status-chip">Route /zoe</span>
+              <span class="status-chip">Demo access</span>
+            </div>
+            <p>
+              Zoe connects Slack, Gmail, and Google Calendar, turns communication and meetings into a live priority
+              queue, and helps users identify the next best action before reactive noise takes over the day.
+            </p>
+            <ul class="bullet-list">
+              <li>Built for product, marketing, founder, consulting, and team-lead workflows.</li>
+              <li>Core pillars: Command Center, Impact Dashboard, Calendar Intelligence, Zoe Chat, and Smart Drafts.</li>
+              <li>Designed to improve clarity, follow-through, meeting prep, and execution quality.</li>
+            </ul>
+            <div class="product-actions">
+              <a class="cta-link primary" href="/zoe">Explore Zoe</a>
+              <a class="cta-link secondary" href="#contact">Request a demo</a>
+            </div>
+          </article>
+
+          <article class="product-card promptos" data-reveal>
+            <span class="card-label">PromptOS</span>
+            <h3>An operating system for AI prompts.</h3>
+            <p class="positioning">Save, optimize, search, reuse, and share prompts.</p>
+            <div class="status-row">
+              <span class="status-chip">Active development</span>
+              <span class="status-chip">Route /promptos</span>
+              <span class="status-chip">Live product</span>
+            </div>
+            <p>
+              PromptOS turns prompts from scattered text into reusable team assets with semantic retrieval,
+              model-aware optimization, structured context, and safer sharing across AI workflows.
+            </p>
+            <ul class="bullet-list">
+              <li>Built for daily AI users across product, engineering, design, marketing, operations, legal, and research.</li>
+              <li>Core workflow: Save, optimize, search, reuse, share, and improve prompts over time.</li>
+              <li>Designed to make prompt quality more consistent, reusable, and operational at team level.</li>
+            </ul>
+            <div class="product-actions">
+              <a class="cta-link primary" href="/promptos">Explore PromptOS</a>
+              <a class="cta-link secondary" href="#contact">Join early access</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="mission">
       <div class="shell">
         <div class="section-heading" data-reveal>
-          <h2>Mission, vision, and <em>company intent</em></h2>
+          <h2>What the company is <em>building toward</em></h2>
           <p>
-            Product Musketeers exists to build useful software with clear purpose and to provide a credible public
-            context for the products connected to this company.
+            Product Musketeers builds software for modern digital work, with a current focus on workflow clarity,
+            prioritization, and AI-native productivity systems.
           </p>
         </div>
 
         <div class="mission-grid">
           <article class="manifesto" data-reveal>
-            <span class="card-label">Mission</span>
-            <h3>Build software that reduces complexity and improves execution.</h3>
+            <span class="card-label">Thesis</span>
+            <h3>Workflow clarity over tool sprawl.</h3>
             <p>
-              We build products that reduce complexity, improve execution, and create practical leverage for modern
-              digital work. The company exists to turn strong product thinking into useful software.
+              The company is interested in products that reduce fragmentation, make priorities more visible, and help
+              people operate with less context switching.
             </p>
           </article>
 
           <article class="manifesto" data-reveal>
-            <span class="card-label">Vision</span>
-            <h3>Create a durable portfolio of useful, trusted digital products.</h3>
+            <span class="card-label">Principle</span>
+            <h3>Execution quality over reactive noise.</h3>
             <p>
-              Our long-term vision is a portfolio of software products with clear utility, strong user trust, and
-              thoughtful execution across both consumer and professional workflows.
+              We build around the idea that better software should improve judgment, follow-through, and day-to-day
+              execution rather than simply add another stream of inputs.
             </p>
           </article>
 
           <article class="manifesto dark" data-reveal>
-            <span class="card-label">What this site is for</span>
-            <h3>A clear public layer around the team and the products.</h3>
+            <span class="card-label">Direction</span>
+            <h3>AI systems that are useful, controlled, and operational.</h3>
             <p>
-              ProductMusketeers.com is both a flagship brand page and an active launch surface for products in
-              development, giving visitors one place to understand the company, explore active products, and request
-              access or conversation where relevant.
+              The long-term aim is a focused portfolio of software products with clear utility, strong user trust,
+              and thoughtful execution across professional and consumer workflows.
             </p>
             <div class="tag-row">
-              <span class="tag">Company profile</span>
-              <span class="tag">Team background</span>
-              <span class="tag">Early access</span>
-              <span class="tag">Product demos</span>
+              <span class="tag">Workflow clarity</span>
+              <span class="tag">Prioritization</span>
+              <span class="tag">AI productivity</span>
+              <span class="tag">Trusted software</span>
             </div>
           </article>
         </div>
@@ -1267,35 +1360,35 @@
     <section id="services">
       <div class="shell">
         <div class="section-heading" data-reveal>
-          <h2>What this site is meant to <em>make clear</em></h2>
-          <p>The company, the team, and the product initiatives connected to this domain.</p>
+          <h2>Company facts and <em>operating context</em></h2>
+          <p>A compact view of what sits behind the products currently published on this domain.</p>
         </div>
 
         <div class="card-grid">
           <article class="card" data-reveal>
-            <span class="card-label">Company</span>
-            <h3>A product company built by three experienced operators</h3>
+            <span class="card-label">Track record</span>
+            <h3>50+ years of combined product experience</h3>
             <p>
-              Product Musketeers is the parent context for the team and the product work emerging from it. The
-              emphasis is on thoughtful software, clear use cases, and credible execution.
+              The founders have built across B2C and B2B software, web and mobile products, and product organizations
+              operating at startup, scale-up, and international company level.
             </p>
           </article>
 
           <article class="card" data-reveal>
-            <span class="card-label">Products</span>
-            <h3>An active environment for product demos, testing, and iteration</h3>
+            <span class="card-label">Current scope</span>
+            <h3>Three founders, two active products, one company context</h3>
             <p>
-              The domain is used to introduce products, route users into live experiences, and create a stable public
-              layer around initiatives that are still evolving.
+              Product Musketeers is the parent company context behind Zoe and PromptOS, with this domain serving as
+              the public layer for product access, demos, and future launches.
             </p>
           </article>
 
           <article class="card" data-reveal>
-            <span class="card-label">Trust</span>
-            <h3>Structured to make the company legible to people and platforms alike</h3>
+            <span class="card-label">Background</span>
+            <h3>Built across global product companies</h3>
             <p>
-              The page is intentionally clear about team identity, product intent, and active initiatives so anyone
-              reviewing the products can understand what sits behind them.
+              The team’s background includes Miro, Sword Health, DiscoverCars, Lokalise, Booking.com, Atlassian,
+              Typeform, and Nokia.
             </p>
           </article>
         </div>
@@ -1325,65 +1418,13 @@
       </div>
     </section>
 
-    <section id="products">
-      <div class="shell">
-        <div class="section-heading" data-reveal>
-          <h2>Products currently associated with the <em>company</em></h2>
-          <p>
-            These are the two active products featured on the site today. Each one addresses a concrete workflow
-            pain point and reflects how the company thinks about clarity, workflow design, and execution leverage.
-          </p>
-        </div>
-
-        <div class="product-showcase">
-          <article class="product-card zoe" data-reveal>
-            <span class="card-label">Zoe</span>
-            <h3>A unified work brain for high-autonomy professionals.</h3>
-            <p class="positioning">Stop reacting. Start operating.</p>
-            <p>
-              Zoe connects Slack, Gmail, and Google Calendar, turns communication and meetings into a live priority
-              queue, and tells users what to do next before noise steals the day.
-            </p>
-            <ul class="bullet-list">
-              <li>Built for product, marketing, founder, consulting, and team-lead workflows.</li>
-              <li>Core pillars: Command Center, Impact Dashboard, Calendar Intelligence, Zoe Chat, and Smart Drafts.</li>
-              <li>Promises clearer daily direction, faster meeting prep, better follow-through, and lower reactive overload.</li>
-            </ul>
-            <div class="product-actions">
-              <a class="cta-link primary" href="/zoe">Explore Zoe</a>
-              <a class="cta-link secondary" href="#contact">Request a demo</a>
-            </div>
-          </article>
-
-          <article class="product-card promptos" data-reveal>
-            <span class="card-label">PromptOS</span>
-            <h3>An AI prompt operations platform for individuals and teams.</h3>
-            <p class="positioning">Your operating system for AI prompts.</p>
-            <p>
-              PromptOS turns prompts from scattered text into reusable team assets with model-aware optimization,
-              semantic search, structured context, versioning paths, and safe sharing across workflows.
-            </p>
-            <ul class="bullet-list">
-              <li>Made for daily AI users across product, engineering, design, marketing, operations, legal, and research.</li>
-              <li>Core workflow: Save, optimize, search, reuse, share, and improve prompts over time.</li>
-              <li>Differentiates from note apps through semantic retrieval, AI metadata, optimization logic, and usage visibility.</li>
-            </ul>
-            <div class="product-actions">
-              <a class="cta-link primary" href="/promptos">Explore PromptOS</a>
-              <a class="cta-link secondary" href="#contact">Join early access</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="approach">
       <div class="shell">
         <div class="section-heading" data-reveal>
           <h2>How the team tends to <em>build and think</em></h2>
           <p>
-            Across internal products and collaborative work, the team values clear reasoning, compact execution
-            loops, and product decisions that stay close to real user behavior.
+            Product Musketeers favors calm product thinking: clear reasoning, fast learning loops, and software that
+            becomes legible quickly in real use.
           </p>
         </div>
 
@@ -1391,8 +1432,8 @@
           <div class="quote" data-reveal>
             <p>"Strong product work usually looks quieter than expected: clear reasoning, fast learning loops, and useful software."</p>
             <small>
-              Product Musketeers brings together product strategy, UX thinking, growth awareness, and shipping
-              discipline in one compact operating perspective.
+              The goal is not more surface area. It is better product judgment, more coherent workflows, and software
+              that earns trust quickly.
             </small>
           </div>
 
@@ -1400,10 +1441,9 @@
             <article class="step" data-reveal>
               <div class="step-num">01</div>
               <div>
-                <h3>Start from the real constraint</h3>
+                <h3>Clear reasoning</h3>
                 <p>
-                  The work starts by understanding where friction actually lives: context overload, weak priority
-                  logic, clumsy workflows, poor onboarding, or low decision clarity.
+                  Start from the real workflow or decision constraint rather than adding features around symptoms.
                 </p>
               </div>
             </article>
@@ -1411,10 +1451,9 @@
             <article class="step" data-reveal>
               <div class="step-num">02</div>
               <div>
-                <h3>Reduce complexity into a sharper next move</h3>
+                <h3>Fast learning loops</h3>
                 <p>
-                  The goal is not more features or more noise. It is a tighter sequence of product decisions with
-                  clear reasoning, tradeoffs, and intended outcomes.
+                  Keep the cycle between idea, user signal, and product decision tight enough to improve quickly.
                 </p>
               </div>
             </article>
@@ -1422,10 +1461,10 @@
             <article class="step" data-reveal>
               <div class="step-num">03</div>
               <div>
-                <h3>Build toward something that can earn trust quickly</h3>
+                <h3>Software that earns trust quickly</h3>
                 <p>
-                  Whether the outcome is a product page, a demo, or a live workflow, the standard is the same:
-                  coherence, usability, and enough clarity to stand up to real scrutiny.
+                  Whether the outcome is a product page or a live workflow, the standard is coherence, usability, and
+                  enough clarity to stand up to scrutiny.
                 </p>
               </div>
             </article>
@@ -1439,9 +1478,8 @@
         <div class="section-heading" data-reveal>
           <h2>Three builders with <em>complementary strengths</em></h2>
           <p>
-            Mike Pilawski, Damian Reweda, and Ori Gal met while working together at Lokalise. Together, they bring a
-            mix of product strategy, UX judgment, growth awareness, and delivery discipline shaped by years of building
-            software across global product companies.
+            Mike Pilawski, Damian Reweda, and Ori Gal met while working together at Lokalise and now build together
+            across product strategy, UX judgment, and execution.
           </p>
         </div>
 
@@ -1451,9 +1489,8 @@
             <h3>Mike Pilawski</h3>
             <span class="role">Miro • Product leadership and operating scale</span>
             <p>
-              Mike brings long-range product and operating experience across high-growth software businesses, with a
-              background spanning Miro, Lokalise, Smallpdf, Typeform, Leanplum, Vungle, NativeX, and Nokia. His work
-              consistently sits at the intersection of product direction, growth systems, and organizational scale.
+              Mike’s background spans Miro, Lokalise, Smallpdf, Typeform, Leanplum, Vungle, NativeX, and Nokia,
+              with work centered on product direction, growth systems, and organizational scale.
             </p>
             <span class="founder-meta">Product strategy • Scale dynamics</span>
           </article>
@@ -1463,9 +1500,8 @@
             <h3>Damian Reweda</h3>
             <span class="role">Sword Health • Product management and technical depth</span>
             <p>
-              Damian combines a technical foundation in software and mobile product development with hands-on product
-              leadership. His background includes engineering-centered product work, earlier time at STXNext, and
-              product leadership at Lokalise, where he focused on roadmap quality, execution, and cross-functional delivery.
+              Damian combines a technical foundation in software and mobile product development with product leadership
+              experience shaped by engineering work, STXNext, Lokalise, and now Sword Health.
             </p>
             <span class="founder-meta">Execution rigor • Technical fluency</span>
           </article>
@@ -1475,9 +1511,8 @@
             <h3>Ori Gal</h3>
             <span class="role">DiscoverCars • Product direction and user-centered execution</span>
             <p>
-              Ori’s background includes product leadership at Lokalise, where he served as Director of Product. He
-              brings a practical approach to product direction, workflow clarity, and user-centered execution, with a
-              bias toward products that feel coherent, useful, and trustworthy from the first interaction onward.
+              Ori’s background includes product leadership at Lokalise, where he served as Director of Product, and a
+              practical approach to workflow clarity, product direction, and user-centered execution.
             </p>
             <span class="founder-meta">Workflow clarity • User judgment</span>
           </article>
@@ -1501,7 +1536,7 @@
               <span class="tag">Partnerships</span>
             </div>
           </div>
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xreyerjq" method="POST">
             <div class="field-grid">
               <div class="field">
                 <label for="name">Name</label>
@@ -1531,6 +1566,8 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="Tell us what you are building, what you want to improve, or which product you want to see." required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="Product Musketeers inquiry">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
             <button class="cta-link primary" type="submit">Send inquiry</button>
             <p class="form-note">Direct line: hello@productmusketeers.com</p>
             <p class="status-note" id="form-status"></p>
@@ -1572,44 +1609,28 @@
     const formStatus = document.querySelector("#form-status");
 
     if (contactForm && formStatus) {
-      contactForm.addEventListener("submit", (event) => {
+      contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const formData = new FormData(contactForm);
-        const name = formData.get("name") || "";
-        const email = formData.get("email") || "";
-        const company = formData.get("company") || "";
-        const interest = formData.get("interest") || "";
-        const message = formData.get("message") || "";
-
         formStatus.textContent = "Sending your inquiry...";
-
-        fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            company,
-            interest,
-            message
-          })
-        })
-          .then(async (response) => {
-            const payload = await response.json().catch(() => ({}));
-
-            if (!response.ok) {
-              throw new Error(payload.error || "Unable to send the inquiry right now.");
-            }
-
-            contactForm.reset();
-            formStatus.textContent = "Inquiry received. We will get back to you shortly.";
-          })
-          .catch((error) => {
-            formStatus.textContent = error.message || "Unable to send the inquiry right now.";
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            headers: {
+              Accept: "application/json"
+            },
+            body: new FormData(contactForm)
           });
+
+          if (!response.ok) {
+            throw new Error("Unable to send the inquiry right now.");
+          }
+
+          contactForm.reset();
+          formStatus.textContent = "Inquiry received. We will get back to you shortly.";
+        } catch (error) {
+          formStatus.textContent = error.message || "Unable to send the inquiry right now.";
+        }
       });
     }
 
